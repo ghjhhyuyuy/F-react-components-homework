@@ -17,6 +17,9 @@ class ChatInput extends Component {
 
   sendMessage = () => {
     this.props.updateMessage(this.state.message);
+    this.setState({
+      message: '',
+    });
   };
 
   render() {

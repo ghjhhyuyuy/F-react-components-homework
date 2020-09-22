@@ -34,7 +34,7 @@ class Chat extends Component {
     message.text = text;
     let messages = this.state.messages.concat(message);
     const defaultMessage = answersData.find((answer) => answer.tags.includes(text));
-    if (defaultMessage !== undefined) {
+    if (defaultMessage) {
       messages = messages.concat(defaultMessage);
     }
     setTimeout(() => {
